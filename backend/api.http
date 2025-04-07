@@ -1,0 +1,57 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username": "Chiku123",
+    "password": "Chiku@2134",
+    "email": "Chiku@example.com",
+    "name": "Chiku jhariya "
+}
+
+###
+
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email" :"Dimple@example.com", 
+    "password":"Dimple@2134"
+}
+
+
+### 
+GET  http://localhost:9090/get_user_and_profile 
+content-Type: application/json
+
+{
+   "token":"d4ccd6df6051604cb1dc00ad3b3f8eafe88b79700cf8fae4a011a9dbb943ad53"
+}
+
+
+###
+POST  http://localhost:9090/update_profile_data
+content-Type: application/json
+
+{
+   "token":"8c6a4c2c3ff855615a38a9e7d3c1fd920d5551b401f55fcf5d6349042e81cc39",
+   "bio" : "I'll reply soon " , 
+   "currentPost" : "CTO",
+   "pastWork" : [
+    {
+        "company" : "HP",
+        "position" : "CTO" ,
+        "years" : "2+"
+    }
+   ] , 
+   "education" : [
+    {
+        "school" : "IIT" , 
+        "degree": "B.tech" , 
+        "fieldOdStudy" : "2015-2019"
+    }
+   ]
+}
+
+###
+GET  http://localhost:9090/user/get_all_users
